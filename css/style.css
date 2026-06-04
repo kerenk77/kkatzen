@@ -74,4 +74,43 @@ p{
     width:45vw;
     filter:drop-shadow(0 30px 40px rgba(0,0,0,.15));
 }
+.books{
+    padding:120px 80px;
+}
+
+.books h2{
+    text-align:center;
+    font-size:3rem;
+    color:var(--dark);
+}
+
+.section-intro{
+    text-align:center;
+    color:#777;
+    margin-bottom:60px;
+}
+
+.books-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.book-card{
+    text-align:center;
+}
+
+.book-card img{
+    width:100%;
+    max-width:260px;
+    transition:.3s;
+}
+
+.book-card img:hover{
+    transform:translateY(-8px);
+}
+
+.book-card h3{
+    margin-top:20px;
+}
 </style>
