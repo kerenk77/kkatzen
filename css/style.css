@@ -206,56 +206,70 @@ p{
 .hero-books img:hover{
     transform:translateY(-5px);
 }
-.books{
-    padding:60px 40px;
-    max-width:1400px;
-    margin:auto;
+/* האזור הכללי של הספרים */
+.books {
+    padding: 40px 80px; /* הוקטן מ-120px כדי להקפיץ את הספרים למעלה */
+    background: #fefefe;
 }
 
-.books h2{
-    text-align:center;
-    font-size:3rem;
-    color:var(--dark);
-    margin-bottom:10px;
+/* כותרת קומפקטית יותר */
+.books h2 {
+    text-align: center;
+    font-size: 2.2rem; /* הוקטן מ-3rem */
+    color: var(--dark);
+    margin: 0 0 5px 0;
 }
 
-.section-intro{
-    text-align:center;
-    color:#777;
-    margin-bottom:35px;
-    font-size:1.1rem;
+/* פסקה קרובה יותר */
+.section-intro {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px; /* הוקטן מ-60px כדי שהגריד יעלה למעלה */
+    font-size: 1.1rem;
 }
 
-.books-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(180px,1fr));
-
-    gap:35px;
-
-    align-items:start;
+/* גריד הספרים */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px; /* שומר על הספרים מרוכזים ויפים */
+    margin: 0 auto;
 }
 
-.book-card img{
-    width:100%;
-    max-width:240px;
-    margin:auto;
-    display:block;
-  }  
-.book-card{
-    text-align:center;
-    padding:20px;
-    border-radius:18px;
-    transition:.3s;
+/* עיצוב כרטיס הספר כקישור נלחץ */
+.book-card {
+    text-align: center;
+    text-decoration: none; /* מבטל קו תחתון של קישורים */
+    color: inherit; /* שומר על צבע הטקסט המקורי */
+    display: block;
 }
 
-.book-card img:hover{
-    transform:translateY(-10px) scale(1.08);
-
-    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
+/* הקטנת תמונות הספרים כדי שייכנסו בבת אחת */
+.book-card img {
+    width: 100%;
+    max-width: 160px; /* הוקטן מ-200px כדי למנוע חיתוך במסכים קטנים */
+    height: auto;
+    transition: transform .35s ease, filter .35s ease;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,.10));
 }
-.book-card h3{
-    margin-top:20px;
+
+/* אפקט מעבר עכבר יוקרתי */
+.book-card img:hover {
+    transform: translateY(-8px) scale(1.04);
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,.15));
 }
 
+/* כותרת הספר מתחת לתמונה */
+.book-card h3 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+/* שינוי צבע הטקסט כשהעכבר מעל כל אזור הכרטיס */
+.book-card:hover h3 {
+    color: var(--gold);
+}
