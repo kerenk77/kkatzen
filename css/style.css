@@ -1,5 +1,10 @@
 <style>
-
+:root{
+    --gold:#B79A58;
+    --dark:#2D2D2D;
+    --turquoise:#4E9AA4;
+    --bg:#FEFEFE;
+}
 body{
     margin:0;
     background:#fefefe;
