@@ -141,7 +141,7 @@ p{
 }
 .book-cover {
     transform: translateY(-20px); /* עידון ההרמה של הספר */
-    max-width: 450px; /* הגדרה מדויקת יותר של מקסימום רוחב */
+    max-width: 600px; /* הגדרה מדויקת יותר של מקסימום רוחב */
     width: 35vw; /* שינוי ה-vw כדי שהספר יקבל נוכחות גדולה יותר במסך */
     filter: drop-shadow(0 30px 40px rgba(0,0,0,.15));
 }
