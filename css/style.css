@@ -3,7 +3,8 @@
 body{
     margin:0;
     background:#fefefe;
-    font-family:Arial,sans-serif;
+    font-family:'Heebo',sans-serif;
+    color:#2d2d2d;
 }
 
 .hero{
