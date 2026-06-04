@@ -77,13 +77,14 @@ body{
     margin:0 auto 25px;
 }
 
+/* צמצום הרווח הכללי והגדלת אזור התוכן */
 .hero {
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    padding: 20px 80px;
+    gap: 30px; /* הוקטן מ-50px כדי לקרב בין הספר לטקסט */
+    padding: 20px 40px; /* צמצום פדינג בצדדים כדי לתת יותר מקום */
 }
 
 .hero > img{
@@ -92,15 +93,15 @@ body{
 }
 
 .text {
-    max-width: 550px;
+    max-width: 420px; /* הוקטן מ-550px כדי שהטקסט יהיה קומפקטי ואסוף */
     text-align: center;
 }
 
-h1{
-    font-size:4.2rem;
-    font-weight:700;
-    color:var(--dark);
-    margin:0;
+h1 {
+    font-size: 3.2rem; /* הוקטן מ-4.2rem כדי להחזיר פרופורציה */
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0;
 }
 
 p{
@@ -139,9 +140,9 @@ p{
     letter-spacing:1px;
 }
 .book-cover {
-    transform: translateY(-40px);
-    max-width: 750px;
-    width: 50vw;
+    transform: translateY(-20px); /* עידון ההרמה של הספר */
+    max-width: 450px; /* הגדרה מדויקת יותר של מקסימום רוחב */
+    width: 35vw; /* שינוי ה-vw כדי שהספר יקבל נוכחות גדולה יותר במסך */
     filter: drop-shadow(0 30px 40px rgba(0,0,0,.15));
 }
 .books{
