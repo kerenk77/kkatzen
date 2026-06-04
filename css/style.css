@@ -133,8 +133,8 @@ p{
 }
 
 .button:hover{
-    background:var(--gold);
-    color:white;
+    background:white;
+    color:var(--gold);
 }
 }
 .subtitle{
