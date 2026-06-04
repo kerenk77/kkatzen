@@ -79,11 +79,13 @@ body{
 
 /* צמצום הרווח הכללי והגדלת אזור התוכן */
 .hero {
+    position: relative;
+
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* צמצום הרווח למינימום כדי להשאיר מקום לספר גדול */
+    gap: 20px;
     padding: 20px 40px;
 }
 
