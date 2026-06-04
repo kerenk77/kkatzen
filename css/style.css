@@ -77,13 +77,21 @@ body{
     margin:0 auto 25px;
 }
 
-.hero{
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:50px;
-    padding:20px 80px;
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap; /* מאפשר לאלמנטים שאין להם מקום לרדת שורה */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px 80px;
+}
+
+/* נגדיר שהטקסט והתמונה יתחלקו ברוחב, כדי שהכפתור יידחף לשורה חדשה */
+.hero > .text, 
+.hero > .book-cover {
+    flex: 1 1 450px; /* גמישות עם רוחב בסיס מינימלי */
+    max-width: 100%;
 }
 
 .hero > img{
@@ -108,29 +116,23 @@ p{
     line-height:1.6;
 }
 
-.button{
-    display:block;
-
-    width:fit-content;
-    align-items:center;
-
-    margin:15px auto 0;
-
-    padding:14px 34px;
-
-    border:2px solid var(--gold);
-
-    border-radius:999px;
-
-    color:var(--dark);
-
-    background:transparent;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:all .3s ease;
+.button {
+    display: block;
+    width: fit-content;
+    /* ה-margin: 30px auto 0; דואג למרכז אותו אופקית בשורה החדשה שלו ונותן מרווח מלמעלה */
+    margin: 30px auto 0; 
+    padding: 14px 34px;
+    border: 2px solid var(--gold);
+    border-radius: 999px;
+    color: var(--dark);
+    background: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s ease;
+    
+    /* מבטיח שהכפתור יתפוס 100% רוחב של השורה שלו כדי שה-margin auto יעבוד מושלם */
+    flex-basis: 100%; 
+    text-align: center;
 }
 
 .button:hover{
