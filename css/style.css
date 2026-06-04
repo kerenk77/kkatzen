@@ -111,18 +111,12 @@ p{
 .button{
     display:inline-block;
     padding:14px 30px;
-
-    border:2px solid var(--gold);
-
-    color:var(--gold);
-    /*background:transparent;*/
-
+    border:2px solid #A78642;
+    color:#A78642;
     border-radius:999px;
-
-    font-weight:600;
     text-decoration:none;
-
-    transition:.3s;
+    font-weight:600;
+    margin-top:25px;
 }
 
 .button:hover{
