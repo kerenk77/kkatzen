@@ -172,19 +172,7 @@ p{
 
     pointer-events: none;
 }
-.hero-particles {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
 
-    background:
-    radial-gradient(circle at 20% 30%, rgba(212,175,55,.8) 0 8px, transparent 10px),
-    radial-gradient(circle at 70% 20%, rgba(212,175,55,.8) 0 8px, transparent 10px),
-    radial-gradient(circle at 80% 60%, rgba(212,175,55,.8) 0 8px, transparent 10px),
-    radial-gradient(circle at 35% 75%, rgba(212,175,55,.8) 0 8px, transparent 10px),
-    radial-gradient(circle at 60% 40%, rgba(212,175,55,.8) 0 8px, transparent 10px);
-}
 
 .books{
     padding:120px 80px;
