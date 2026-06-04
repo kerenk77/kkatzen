@@ -173,41 +173,70 @@ p{
     pointer-events: none;
 }
 
+.hero-books{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:40px;
+}
 
+.hero-books img{
+    height:120px;
+    width:auto;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+}
+
+.hero-books img:hover{
+    transform:translateY(-5px);
+}
 .books{
-    padding:120px 80px;
+    padding:60px 40px;
+    max-width:1400px;
+    margin:auto;
 }
 
 .books h2{
     text-align:center;
     font-size:3rem;
     color:var(--dark);
+    margin-bottom:10px;
 }
 
 .section-intro{
     text-align:center;
     color:#777;
-    margin-bottom:60px;
+    margin-bottom:35px;
+    font-size:1.1rem;
 }
 
 .books-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
 
-.book-card{
-    text-align:center;
+    grid-template-columns:
+        repeat(auto-fit,minmax(180px,1fr));
+
+    gap:35px;
+
+    align-items:start;
 }
 
 .book-card img{
     width:100%;
-    max-width:200px;
-
-    transition:transform .35s ease,
-               filter .35s ease;
-
-    filter:drop-shadow(0 10px 20px rgba(0,0,0,.10));
+    max-width:240px;
+    margin:auto;
+    display:block;
+  }  
+.book-card{
+    text-align:center;
+    padding:20px;
+    border-radius:18px;
+    transition:.3s;
 }
 
 .book-card img:hover{
