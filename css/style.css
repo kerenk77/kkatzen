@@ -5,6 +5,9 @@
     --turquoise:#4E9AA4;
     --bg:#FEFEFE;
 }
+html{
+    scroll-behavior:smooth;
+}
 /* HEADER */
 
 .site-header{
@@ -15,7 +18,7 @@
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 60px;
+    padding:20px 80px;
 
     background:rgba(254,254,254,.92);
     backdrop-filter:blur(10px);
@@ -69,7 +72,7 @@ body{
     color:#2d2d2d;
 }
 .logo{
-    width:260px;
+    width:180px;
     display:block;
     margin:0 auto 25px;
 }
@@ -106,20 +109,16 @@ p{
 }
 
 .button{
-    display:inline-block;
-    margin-top:25px;
-    padding:16px 36px;
+    background:transparent;
+    color:var(--gold);
 
-    background:var(--gold);
-    color:white;
+    border:2px solid var(--gold);
+
+    padding:14px 32px;
+
+    border-radius:999px;
 
     text-decoration:none;
-    border-radius:50px;
-
-    font-weight:500;
-    font-size:1rem;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 .button:hover{
     transform:translateY(-2px);
