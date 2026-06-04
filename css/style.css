@@ -1,6 +1,6 @@
 <style>
 :root{
-    --gold:#B79A58;
+    --gold:#A78642;
     --dark:#2D2D2D;
     --turquoise:#4E9AA4;
     --bg:#FEFEFE;
@@ -12,7 +12,7 @@ body{
     color:#2d2d2d;
 }
 .logo{
-    width:180px;
+    width:260px;
     display:block;
     margin:0 auto 25px;
 }
@@ -37,7 +37,7 @@ body{
 }
 
 h1{
-    font-size:5rem;
+    font-size:4.2rem;
     font-weight:800;
     color:var(--dark);
     margin:0;
@@ -50,12 +50,21 @@ p{
 
 .button{
     display:inline-block;
-    padding:16px 32px;
+    margin-top:20px;
+    padding:16px 36px;
     background:var(--gold);
     color:white;
     text-decoration:none;
-    border-radius:10px;
+    border-radius:50px;
+    font-size:1.1rem;
     font-weight:500;
+    transition:all .3s ease;
+    box-shadow:0 8px 20px rgba(167,134,66,.2);
+}
+.button:hover{
+    transform:translateY(-2px);
+    background:#967435;
+    box-shadow:0 12px 25px rgba(167,134,66,.3);
 }
 .subtitle{
     color:#666;
@@ -70,6 +79,7 @@ p{
     letter-spacing:1px;
 }
 .book-cover{
+     transform:translateY(-40px);
     max-width:650px;
     width:45vw;
     filter:drop-shadow(0 30px 40px rgba(0,0,0,.15));
