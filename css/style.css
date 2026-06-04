@@ -83,8 +83,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px; /* הוקטן מ-50px כדי לקרב בין הספר לטקסט */
-    padding: 20px 40px; /* צמצום פדינג בצדדים כדי לתת יותר מקום */
+    gap: 20px; /* צמצום הרווח למינימום כדי להשאיר מקום לספר גדול */
+    padding: 20px 40px;
 }
 
 .hero > img{
@@ -140,10 +140,14 @@ p{
     letter-spacing:1px;
 }
 .book-cover {
-    transform: translateY(-20px); /* עידון ההרמה של הספר */
-    max-width: 600px; /* הגדרה מדויקת יותר של מקסימום רוחב */
-    width: 35vw; /* שינוי ה-vw כדי שהספר יקבל נוכחות גדולה יותר במסך */
+    transform: translateY(-20px); /* הרמה קלה ומעודנת יותר של הספר */
+    
+    /* הגדלת המידות */
+    max-width: 600px; /* הגדלנו מ-450px כדי לאפשר לו לגדול במסכים גדולים */
+    width: 45vw;      /* הגדלנו מ-35vw - עכשיו הוא יתפוס כמעט חצי מרוחב המסך */
+    
     filter: drop-shadow(0 30px 40px rgba(0,0,0,.15));
+    transition: transform .3s ease; /* הוספת אנימציה חלקה */
 }
 .books{
     padding:120px 80px;
