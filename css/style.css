@@ -559,105 +559,68 @@ MOBILE
     color:#666;
     margin-bottom:20px;
 }
-/* =========================
-   CONTACT
-========================= */
-
 .contact{
-    position:relative;
+    padding:120px 40px 100px;
+}
 
-    padding:180px 40px 160px;
+.contact-box{
+    max-width:750px;
+
+    margin:auto;
 
     text-align:center;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(167,134,66,.05),
-            transparent 70%
-        );
+    padding:70px 50px;
+
+    border-radius:30px;
+
+    background:white;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.06);
 }
 
-.contact::before{
-    content:"";
-
+.contact-label{
     display:block;
 
-    width:70px;
-    height:1px;
+    color:var(--gold);
 
-    margin:0 auto 40px;
+    font-size:.85rem;
 
-    background:var(--gold);
+    letter-spacing:3px;
 
-    opacity:.7;
+    margin-bottom:20px;
 }
 
 .contact h2{
+    font-size:3rem;
+
     margin:0 0 25px;
 
-    font-size:3.2rem;
-    font-weight:300;
-
-    letter-spacing:-1px;
-
-    color:var(--dark);
+    font-weight:700;
 }
 
 .contact p{
-    max-width:620px;
+    font-size:1.1rem;
 
-    margin:0 auto 50px;
+    line-height:1.9;
 
-    font-size:1.15rem;
+    color:#666;
 
-    line-height:2;
+    max-width:500px;
 
-    color:#6b6b6b;
+    margin:0 auto 40px;
 }
 
 .contact-buttons{
     display:flex;
+
     justify-content:center;
-    gap:18px;
+
+    gap:20px;
+
     flex-wrap:wrap;
 }
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-    padding:45px 20px;
-
-    text-align:center;
-
-    background:#fefefe;
-
-    border-top:
-        1px solid rgba(0,0,0,.05);
-}
-
-.footer p{
-    margin:0;
-
-    font-size:.92rem;
-
-    letter-spacing:1.5px;
-
-    color:#666;
-}
-
-.footer small{
-    display:block;
-
-    margin-top:12px;
-
-    font-size:.8rem;
-
-    color:#a0a0a0;
-}
-
 /* =========================
    MOBILE
 ========================= */
