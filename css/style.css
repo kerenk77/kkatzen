@@ -109,19 +109,33 @@ p{
 }
 
 .button{
-    display:inline-block;
-    padding:14px 30px;
-    border:2px solid #A78642;
-    color:#A78642;
+    display:block;
+    width:fit-content;
+
+    margin:-20px auto 0;
+
+    padding:14px 32px;
+
+    border:2px solid var(--gold);
+
+    color:var(--gold);
+    background:transparent;
+
     border-radius:999px;
+
     text-decoration:none;
     font-weight:600;
-    margin-top:25px;
+
+    transition:all .3s ease;
 }
 
 .button:hover{
     background:var(--gold);
-    color:white;
+
+    /* להשאיר את הכתב זהוב */
+    color:var(--bg);
+
+    transform:translateY(-2px);
 }
 .subtitle{
     max-width:420px;
