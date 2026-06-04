@@ -110,32 +110,32 @@ p{
 
 .button{
     display:block;
+
     width:fit-content;
 
-    margin:-20px auto 0;
+    margin:15px auto 0;
 
-    padding:14px 32px;
+    padding:14px 34px;
 
     border:2px solid var(--gold);
 
-    color:var(--gold);
-    background:transparent;
-
     border-radius:999px;
 
+    color:var(--dark);
+
+    background:transparent;
+
     text-decoration:none;
-    font-weight:600;
+
+    font-weight:500;
 
     transition:all .3s ease;
 }
 
 .button:hover{
     background:var(--gold);
-
-    /* להשאיר את הכתב זהוב */
-    color:var(--bg);
-
-    transform:translateY(-2px);
+    color:white;
+}
 }
 .subtitle{
     max-width:420px;
