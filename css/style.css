@@ -1,4 +1,4 @@
-<style>
+
 :root{
     --gold:#A78642;
     --dark:#2D2D2D;
@@ -123,7 +123,7 @@ p{
 
     color:var(--dark);
 
-    background:var(--gold);
+    background:transparent;
 
     text-decoration:none;
 
@@ -199,4 +199,4 @@ p{
 .book-card h3{
     margin-top:20px;
 }
-</style>
+
