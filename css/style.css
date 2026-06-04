@@ -11,6 +11,10 @@ body{
     font-family:'Heebo',sans-serif;
     color:#2d2d2d;
 }
+.logo{
+    width:120px;
+    margin-bottom:30px;
+}
 
 .hero{
     min-height:100vh;
@@ -21,8 +25,9 @@ body{
     padding:60px;
 }
 
-.hero img{
-    max-width:400px;
+.hero > img{
+    max-width:650px;
+    filter:drop-shadow(0px 25px 35px rgba(0,0,0,.15));
 }
 
 .text{
@@ -30,8 +35,10 @@ body{
 }
 
 h1{
-    font-size:64px;
-    margin-bottom:20px;
+    font-size:72px;
+    font-weight:800;
+    color:#2D2D2D;
+    margin-bottom:10px;
 }
 
 p{
@@ -48,5 +55,10 @@ p{
     text-decoration:none;
     border-radius:8px;
 }
-
+.subtitle{
+    font-size:32px;
+    color:#B79A58;
+    font-weight:300;
+    margin-bottom:20px;
+}
 </style>
