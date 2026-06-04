@@ -174,7 +174,7 @@ p{
 .books-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:50px;
+    gap:30px;
 }
 
 .book-card{
@@ -183,14 +183,19 @@ p{
 
 .book-card img{
     width:100%;
-    max-width:260px;
-    transition:.3s;
+    max-width:200px;
+
+    transition:transform .35s ease,
+               filter .35s ease;
+
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.10));
 }
 
 .book-card img:hover{
-    transform:translateY(-8px);
-}
+    transform:translateY(-10px) scale(1.08);
 
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
+}
 .book-card h3{
     margin-top:20px;
 }
