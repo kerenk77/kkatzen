@@ -484,9 +484,30 @@ p{
 ========================= */
 
 .illustrations{
+
+    position:relative;
+
     padding:90px 40px;
 
-    background:#faf9f6;
+    background:#fefefe;
+}
+
+.illustrations::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(167,134,66,.04),
+            transparent 70%
+        );
+
+    pointer-events:none;
 }
 
 .illustrations-header{
@@ -564,8 +585,8 @@ p{
 
     background:white;
 
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.08);
+   box-shadow:
+    0 2px 8px rgba(0,0,0,.04);
 
     transition:
         transform .3s ease,
@@ -705,7 +726,30 @@ p{
 .lightbox:hover .lightbox-next{
     opacity:1;
 }
+.lightbox-prev-zone,
+.lightbox-next-zone{
 
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    width:30%;
+
+    cursor:pointer;
+
+    z-index:10000;
+}
+
+.lightbox-prev-zone{
+
+    left:0;
+}
+
+.lightbox-next-zone{
+
+    right:0;
+}
 /* =========================
 MOBILE
 ========================= */
