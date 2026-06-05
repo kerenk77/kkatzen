@@ -213,7 +213,14 @@ p{
     margin-bottom:10px;
     text-transform:uppercase;
 }
-
+.books-tag2{
+    display:block;
+    color:var(--gold);
+    font-size:20rem;
+    letter-spacing:3px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
 .book-image{
     display:flex;
     justify-content:center;
@@ -600,7 +607,67 @@ backdrop-filter:blur(10px);
 
     visibility:visible;
 }
+.lightbox-close{
 
+    position:absolute;
+
+    top:25px;
+    right:30px;
+
+    border:none;
+    background:none;
+
+    font-size:42px;
+    font-weight:300;
+
+    color:rgba(120,120,120,.8);
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.lightbox-close:hover{
+    color:var(--gold);
+}
+.lightbox-prev,
+.lightbox-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+    background:none;
+
+    font-size:70px;
+
+    font-weight:200;
+
+    color:rgba(140,140,140,.55);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:10000;
+}
+
+.lightbox-prev{
+    left:35px;
+}
+
+.lightbox-next{
+    right:35px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+
+    color:rgba(140,140,140,.95);
+}
 
 /* =========================
    TABLET
