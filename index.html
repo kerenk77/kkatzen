@@ -321,11 +321,11 @@
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox">
 
-    <button class="lightbox-prev">&#10094;</button>
+    <div class="lightbox-prev-zone"></div>
 
     <img id="lightbox-img" src="" alt="">
 
-    <button class="lightbox-next">&#10095;</button>
+    <div class="lightbox-next-zone"></div>
 
     <div class="lightbox-counter">
         <span id="current-image">1</span>
@@ -348,12 +348,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg =
         document.getElementById('lightbox-img');
 
-    const prevBtn =
-        document.querySelector('.lightbox-prev');
+   const prevBtn =
+document.querySelector('.lightbox-prev-zone');
 
-    const nextBtn =
-        document.querySelector('.lightbox-next');
-
+const nextBtn =
+document.querySelector('.lightbox-next-zone');
+   
     const currentImage =
         document.getElementById('current-image');
 
