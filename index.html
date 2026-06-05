@@ -185,13 +185,10 @@
 
 <div class="books-header">
 
-    <span class="books-tag">הספרים שלי</span>
-
-    <h2>עולמות של הרפתקה ודמיון</h2>
+    <span class="books-tag2">פרויקטים נבחרים</span>
 
     <p class="section-intro">
-        סיפורי פנטזיה והרפתקאות לקוראים צעירים,
-        מלאי אומץ, מסעות, אמונה וגילויים מפתיעים.
+    ספרים ופרויקטים שבהם לקחתי חלק בתהליך היצירה — מן הרעיון הראשוני ועד הקובץ המוכן לדפוס.
     </p>
 
 </div>
@@ -330,6 +327,10 @@
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox">
 
+    <button class="lightbox-close">×</button>
+   <button class="lightbox-prev">‹</button>
+<button class="lightbox-next">›</button>
+
     <div class="lightbox-prev-zone"></div>
 
     <img id="lightbox-img" src="" alt="">
@@ -338,7 +339,7 @@
 
     <div class="lightbox-counter">
         <span id="current-image">1</span>
-        /
+        
         <span id="total-images">1</span>
     </div>
 
@@ -368,6 +369,9 @@ document.querySelector('.lightbox-next-zone');
 
     const totalImages =
         document.getElementById('total-images');
+   document
+.querySelector('.lightbox-close')
+.addEventListener('click',closeLightbox);
 
     let currentIndex = 0;
 
