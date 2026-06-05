@@ -23,7 +23,7 @@
     <a href="#process">מהרעיון לדפוס</a>
     <span>·</span>
 
-    <a href="#process">תהליך עבודה</a>
+    <a href="#illustrations">גלריית איורים</a>
     <span>·</span>
 
     <a href="#books">ספרים</a>
@@ -149,7 +149,37 @@
 
 </section>
 
+<section id="illustrations" class="illustrations">
 
+    <div class="illustrations-header">
+
+        <span class="illustrations-tag">
+            גלריה
+        </span>
+
+        <h2>גלריית איורים</h2>
+
+        <p>
+            מבחר איורים מתוך ספרים ופרויקטים שונים.
+        </p>
+
+    </div>
+
+    <div class="illustrations-grid">
+
+        <img src="images/illustration1.jpg" alt="איור מספר 1">
+        <img src="images/illustration2.jpg" alt="איור מספר 2">
+        <img src="images/illustration3.jpg" alt="איור מספר 3">
+        <img src="images/illustration4.jpg" alt="איור מספר 4">
+        <img src="images/illustration5.jpg" alt="איור מספר 5">
+        <img src="images/illustration6.jpg" alt="איור מספר 6">
+        <img src="images/illustration7.jpg" alt="איור מספר 7">
+        <img src="images/illustration8.jpg" alt="איור מספר 8">
+
+    </div>
+
+</section>
+   
   <section id="books" class="books">
 
 
@@ -294,6 +324,49 @@
     </small>
 
 </footer>
+<!-- Lightbox -->
 
+<div id="lightbox" class="lightbox">
+
+    <img id="lightbox-img" src="" alt="תצוגת איור מוגדלת">
+
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const images =
+        document.querySelectorAll('.illustrations-grid img');
+
+    const lightbox =
+        document.getElementById('lightbox');
+
+    const lightboxImg =
+        document.getElementById('lightbox-img');
+
+    images.forEach(image => {
+
+        image.addEventListener('click', () => {
+
+            lightboxImg.src = image.src;
+
+            lightbox.classList.add('active');
+
+        });
+
+    });
+
+    lightbox.addEventListener('click', () => {
+
+        lightbox.classList.remove('active');
+
+        lightboxImg.src = '';
+
+    });
+
+});
+
+</script>
 </body>
 </html>
