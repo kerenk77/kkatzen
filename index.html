@@ -324,22 +324,19 @@
     </div>
 
 </section>
-<!-- Lightbox -->
 <div id="lightbox" class="lightbox">
 
     <button class="lightbox-close">×</button>
-   <button class="lightbox-prev">‹</button>
-<button class="lightbox-next">›</button>
 
-    <div class="lightbox-prev-zone"></div>
+    <button class="lightbox-prev">‹</button>
 
     <img id="lightbox-img" src="" alt="">
 
-    <div class="lightbox-next-zone"></div>
+    <button class="lightbox-next">›</button>
 
     <div class="lightbox-counter">
         <span id="current-image">1</span>
-        
+        /
         <span id="total-images">1</span>
     </div>
 
@@ -358,11 +355,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg =
         document.getElementById('lightbox-img');
 
-   const prevBtn =
-document.querySelector('.lightbox-prev-zone');
+  const prevBtn =
+document.querySelector('.lightbox-prev');
 
 const nextBtn =
-document.querySelector('.lightbox-next-zone');
+document.querySelector('.lightbox-next');
    
     const currentImage =
         document.getElementById('current-image');
