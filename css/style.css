@@ -1067,7 +1067,7 @@ MOBILE
 
     max-width:1100px;
 
-    margin:120px auto;
+    margin:60px auto;
 
     padding:0 40px;
 
@@ -1077,19 +1077,19 @@ MOBILE
         1fr
         480px;
 
-    gap:70px;
+    /*gap:70px;*/
 
     align-items:center;
 }
 .case-study{
 
-    padding:120px 40px;
+    padding:60px 40px;
 
     background:#fefefe;
 }
 .case-study .section-text{
 
-    max-width:680px;
+    max-width:480px;
 
     margin:0 auto;
 
@@ -1099,7 +1099,7 @@ MOBILE
 
     display:block;
 
-    margin-bottom:12px;
+    margin-bottom:9px;
 
     color:var(--gold);
 
@@ -1115,7 +1115,7 @@ MOBILE
 
     font-size:2rem;
 
-    font-weight:500;
+    font-weight:300;
 
     color:var(--dark);
 }
@@ -1133,7 +1133,7 @@ MOBILE
 
     margin-bottom:0;
 }
-@media (max-width:768px){
+@media (max-width:368px){
 
     .case-study{
 
@@ -1142,5 +1142,5 @@ MOBILE
 
     .case-study h2{
 
-        font-size:1.7rem;
+        font-size:1.1rem;
     }
