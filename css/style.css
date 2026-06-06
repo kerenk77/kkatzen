@@ -950,21 +950,19 @@ MOBILE
 
     position:relative;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:50px;
-
-    padding:60px 40px;
-
     max-width:1100px;
 
-    margin:40px auto 0;
+    margin:60px auto;
 
-    overflow:hidden;
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:80px;
+
+    align-items:center;
 }
 .book-page-hero::before{
 
@@ -972,12 +970,11 @@ MOBILE
 
     position:absolute;
 
-    width:500px;
-    height:500px;
+    left:80px;
+    top:55%;
 
-    left:120px;
-
-    top:50%;
+    width:420px;
+    height:420px;
 
     transform:translateY(-50%);
 
@@ -996,21 +993,14 @@ MOBILE
 
     width:260px;
 
-    height:auto;
-
     display:block;
 
-    position:relative;
-
-    z-index:2;
+    justify-self:center;
 }
 .book-page-content{
 
-    max-width:500px;
+    max-width:520px;
 
-    position:relative;
-
-    z-index:2;
 }
 
 .book-page-content h1{
