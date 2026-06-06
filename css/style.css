@@ -948,21 +948,19 @@ MOBILE
 /*daf sefer*/
 .book-page-hero{
 
-    position:relative;
-
     max-width:1100px;
 
-    margin:40px auto 80px;
+    margin:60px auto;
 
     padding:0 40px;
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap:70px;
 
     align-items:center;
-
-    justify-content:center;
-
-    gap:60px;
 }
 .book-page-hero::before{
 
@@ -991,15 +989,15 @@ MOBILE
 }
 .book-page-cover{
 
-    width:260px;
+    width:280px;
 
-    height:auto;
+    max-width:100%;
 
-    flex-shrink:0;
+    display:block;
 }
 .book-page-content{
 
-    max-width:500px;
+    max-width:600px;
 }
 
 .book-page-content h1{
@@ -1125,4 +1123,7 @@ MOBILE
 
 .book-page-cover{
     border:3px solid green;
+}
+body{
+    overflow-x:hidden;
 }
