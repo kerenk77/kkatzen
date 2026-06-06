@@ -998,6 +998,7 @@ MOBILE
     width:260px;
 
     display:block;
+    border:2px solid red;
 
     justify-self:center;
 }
