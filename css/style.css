@@ -945,3 +945,108 @@ MOBILE
 }
 
 }
+/*daf sefer*/
+.project-list{
+
+    list-style:none;
+
+    padding:0;
+    margin:35px 0 0;
+
+    text-align:center;
+}
+
+.project-list li{
+
+    display:inline-block;
+
+    font-size:.9rem;
+
+    color:#666;
+
+    margin:6px 12px;
+
+    letter-spacing:.3px;
+}
+.showcase{
+
+    max-width:1100px;
+
+    margin:120px auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        480px;
+
+    gap:70px;
+
+    align-items:center;
+}
+.case-study{
+
+    padding:120px 40px;
+
+    background:#fefefe;
+}
+.case-study .section-text{
+
+    max-width:680px;
+
+    margin:0 auto;
+
+    text-align:center;
+}
+.case-study .section-tag{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--gold);
+
+    font-size:.8rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+.case-study h2{
+
+    margin:0 0 30px;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    color:var(--dark);
+}
+.case-study p{
+
+    margin:0 0 20px;
+
+    font-size:1rem;
+
+    line-height:2;
+
+    color:#666;
+}
+.case-study p:last-child{
+
+    margin-bottom:0;
+}
+@media (max-width:768px){
+
+    .case-study{
+
+        padding:90px 25px;
+    }
+
+    .case-study h2{
+
+        font-size:1.7rem;
+    }
+}
