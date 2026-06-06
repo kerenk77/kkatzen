@@ -958,7 +958,7 @@ MOBILE
 
     grid-template-columns: 320px 1fr;
 
-    gap:70px;
+   /* gap:70px;*/
 
     align-items:center;
 }
