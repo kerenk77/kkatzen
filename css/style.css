@@ -948,37 +948,21 @@ MOBILE
 /*daf sefer*/
 .book-page-hero{
 
-   /* position:relative;
-
     max-width:1100px;
 
-    margin:40px auto 60px;
+    margin:40px auto 80px;
 
     padding:0 40px;
 
-    display:grid;
+    display:flex;
 
-    display:grid;
+    flex-direction:row-reverse;
 
-    grid-template-columns:
-        minmax(220px,300px)
-        minmax(300px,500px);
-
-    gap:40px;
+    align-items:center;
 
     justify-content:center;
 
-    align-items:center;*/
-     position: relative;
-
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 40px;
-
-
+    gap:60px;
 }
 .book-page-hero::before{
 
@@ -1009,14 +993,13 @@ MOBILE
 
     width:260px;
 
-   display:block;
+    height:auto;
 
-    justify-self:center;
+    flex-shrink:0;
 }
 .book-page-content{
 
-    max-width:520px;
-
+    max-width:500px;
 }
 
 .book-page-content h1{
