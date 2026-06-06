@@ -1010,7 +1010,7 @@ MOBILE
 }
 .book-page-content{
 
-    max-width: 420px; /* הוקטן מ-550px כדי שהטקסט יהיה קומפקטי ואסוף */
+    max-width: 1100px; /* הוקטן מ-550px כדי שהטקסט יהיה קומפקטי ואסוף */
     text-align: center;
 }
 
@@ -1128,7 +1128,7 @@ MOBILE
     }
 }
 .book-page-hero{
-    border:3px solid red;
+    border:3px solid brown;
 }
 
 .book-page-content{
