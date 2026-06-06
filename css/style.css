@@ -948,7 +948,7 @@ MOBILE
 /*daf sefer*/
 .book-page-hero{
 
-    position:relative;
+   /* position:relative;
 
     max-width:1100px;
 
@@ -968,11 +968,19 @@ MOBILE
 
     justify-content:center;
 
-    align-items:center;
+    align-items:center;*/
+     position: relative;
+
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px;
 
 
 }
-/*.book-page-hero::before{
+.book-page-hero::before{
 
     content:"";
 
@@ -996,14 +1004,14 @@ MOBILE
     );
 
     pointer-events:none;
-}*/
+}
 .book-page-cover{
 
     width:260px;
 
-   /* display:block;
+   display:block;
 
-    justify-self:center;*/
+    justify-self:center;
 }
 .book-page-content{
 
