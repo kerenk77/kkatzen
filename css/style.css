@@ -1050,3 +1050,31 @@ MOBILE
         font-size:1.7rem;
     }
 }
+.book-page-hero{
+
+    max-width:1200px;
+
+    margin:100px auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 380px;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.book-page-cover{
+
+    width:100%;
+
+    max-width:360px;
+
+    display:block;
+
+    margin:auto;
+}
