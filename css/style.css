@@ -947,12 +947,8 @@ MOBILE
 }
 /*daf sefer*/
 .book-page-hero{
-     transform:none !important;
-
 
     position:relative;
-
-    padding:60px 40px;
 
     display:flex;
 
@@ -960,13 +956,15 @@ MOBILE
 
     justify-content:center;
 
-    gap:30px;
+    gap:50px;
 
-    padding:20px 40px;
+    padding:120px 40px 80px;
 
     overflow:hidden;
-     top:auto;
-    left:auto;
+
+    max-width:1200px;
+
+    margin:0 auto;
 }
 .book-page-hero::before{
 
@@ -977,25 +975,31 @@ MOBILE
     width:500px;
     height:500px;
 
-    left:0;
+    left:120px;
 
     top:50%;
 
     transform:translateY(-50%);
 
+    border-radius:50%;
+
     background:radial-gradient(
         circle,
-        rgba(212,175,55,.12) 0%,
-        rgba(212,175,55,.04) 40%,
+        rgba(167,134,66,.10) 0%,
+        rgba(167,134,66,.04) 45%,
         transparent 75%
     );
 
     pointer-events:none;
 }
 .book-page-cover{
+     transform:translateY(-20px);
 
-  width:260px !important;
-    max-width:260px !important;
+    width:240px;
+
+    height:auto;
+
+    display:block;
 
     position:relative;
 
@@ -1003,7 +1007,7 @@ MOBILE
 }
 .book-page-content{
 
-    max-width:520px;
+    max-width:500px;
 
     position:relative;
 
@@ -1013,7 +1017,7 @@ MOBILE
 
     margin:0;
 
-    font-size:2.7rem;
+    font-size:2.6rem;
 
     line-height:1.1;
 }
@@ -1034,7 +1038,7 @@ MOBILE
 
 .project-list li{
 
-    font-size:.9rem;
+    font-size:8rem;
 
     color:#666;
 }
