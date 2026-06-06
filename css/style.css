@@ -968,7 +968,7 @@ MOBILE
 
     gap:60px;
 }
-.book-page-hero::before{
+/*.book-page-hero::before{
 
     content:"";
 
@@ -992,13 +992,12 @@ MOBILE
     );
 
     pointer-events:none;
-}
+}*/
 .book-page-cover{
 
     width:260px;
 
     display:block;
-    border:2px solid red;
 
     justify-self:center;
 }
