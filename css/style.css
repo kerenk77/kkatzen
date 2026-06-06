@@ -1159,3 +1159,31 @@ MOBILE
 
     margin:auto;
 }
+.book-page-hero{
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    gap:80px !important;
+
+    min-height:80vh !important;
+}
+
+.book-page-cover{
+
+    width:350px !important;
+
+    max-width:350px !important;
+
+    height:auto !important;
+
+    display:block !important;
+
+    transform:none !important;
+
+    position:static !important;
+
+    margin:0 !important;
+}
