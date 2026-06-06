@@ -1115,3 +1115,14 @@ MOBILE
         font-size:1.7rem;
     }
 }
+.book-page-hero{
+    border:3px solid red;
+}
+
+.book-page-content{
+    border:3px solid blue;
+}
+
+.book-page-cover{
+    border:3px solid green;
+}
