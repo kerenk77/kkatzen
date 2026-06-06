@@ -958,15 +958,19 @@ MOBILE
 
     display:grid;
 
+    display:grid;
+
     grid-template-columns:
-        300px
-        500px;
+        minmax(220px,300px)
+        minmax(300px,500px);
+
+    gap:40px;
 
     justify-content:center;
 
     align-items:center;
 
-    gap:60px;
+
 }
 /*.book-page-hero::before{
 
