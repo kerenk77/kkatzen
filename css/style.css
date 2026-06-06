@@ -947,8 +947,16 @@ MOBILE
 }
 /*daf sefer*/
 .book-page-hero{
+     position: relative;
 
-   /* max-width:1100px;*/
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px;
+
+   /* max-width:1100px;
 
     margin:60px auto;
 
@@ -958,9 +966,9 @@ MOBILE
 
    grid-template-columns:320px 420px;
 
-   /* gap:70px;*/
+   /* gap:70px;
 
-    align-items:center;
+    align-items:center;*/
 }
 .book-page-hero::before{
 
@@ -988,16 +996,19 @@ MOBILE
     pointer-events:none;
 }
 .book-page-cover{
+      max-width:700px;
+    filter:drop-shadow(0px 25px 35px rgba(0,0,0,.15));
 
-    width:280px;
+   /* width:280px;
 
     max-width:100%;
 
-    display:block;
+    display:block;*/
 }
 .book-page-content{
 
-    max-width:400px;
+    max-width: 420px; /* הוקטן מ-550px כדי שהטקסט יהיה קומפקטי ואסוף */
+    text-align: center;
 }
 
 .book-page-content h1{
@@ -1114,7 +1125,7 @@ MOBILE
     }
 }
 .book-page-hero{
-    border:3px solid red;
+    border:3px solid brown;
 }
 
 .book-page-content{
