@@ -82,14 +82,18 @@ body{
 
 /* צמצום הרווח הכללי והגדלת אזור התוכן */
 .hero {
+
     position: relative;
 
-    min-height: 80vh;
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 20px;
-    padding: 20px 40px;
+
+    padding: 40px 40px 60px;
 }
 
 .hero > img{
@@ -158,8 +162,8 @@ p{
     content: "";
     position: absolute;
 
-    width: 700px;
-    height: 700px;
+    width: 550px;
+    height: 550px;
 
     right: 50px;
     top: 50%;
