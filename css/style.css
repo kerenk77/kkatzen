@@ -780,9 +780,6 @@ backdrop-filter:blur(10px);
 MOBILE
 ========================= */
 
-@media (max-width:900px){
-
-```
 .services{
     padding:80px 30px;
 }
