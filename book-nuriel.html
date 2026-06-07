@@ -94,7 +94,7 @@
 
             <p><strong>פורמט:</strong> כריכה קשה</p>
 
-            <p><strong>כלים:</strong> Adobe Photoshop · Adobe InDesign</p>
+            <p><strong>כלים:</strong> Adobe Photoshop · Adobe InDesign · AI-Assisted Illustration</p>
 
         </div>
 
@@ -108,14 +108,12 @@
 
     <div class="section-text">
 
-        <span class="section-tag">
-            דף השער
-        </span>
+       <p class="tagline">דף השער</p>
 
-        <h2>פתיחה אל תוך העולם</h2>
+        <h2>כניסה אל תוך העולם</h2>
 
         <p>
-            דף השער ממשיך את השפה החזותית של הספר ומחבר בין הכריכה לבין העולם הפנימי של הסיפור.
+           דף השער עוצב במיוחד כדי לשמש כשער חזותי לעולם הספר. הוא משלב מספר דמויות מרכזיות, אלמנטים עלילתיים וסמלים המלווים את הסיפור, תוך יצירת קומפוזיציה המעוררת סקרנות ומעודדת את הקורא לחפש את הקשרים ביניהם. כל פרט נבחר כדי לרמוז על רבדים שונים בעלילה מבלי לחשוף את סודותיה.
         </p>
 
     </div>
@@ -130,9 +128,7 @@
 
     <div class="section-text">
 
-        <span class="section-tag">
-            איורי פרקים
-        </span>
+        <p class="tagline">תחילת פרק</p>
 
         <h2>איורי פתיחה</h2>
 
@@ -156,9 +152,7 @@
 
     <div class="section-text">
 
-        <span class="section-tag">
-            עימוד
-        </span>
+        <p class="tagline">עימוד</p>
 
         <h2>עיצוב פנים הספר</h2>
 
@@ -214,8 +208,7 @@
 
         <h2>יצירת האיורים</h2>
 
-        <p>
-            האיורים נוצרו בתהליך משולב של פיתוח חזותי, בחירת קומפוזיציות ועבודת עיבוד פרטנית בפוטושופ.
+        <p>האיורים נוצרו באמצעות שילוב של מספר כלי בינה מלאכותית, ששימשו כבסיס לפיתוח חזותי, חיפוש קומפוזיציות וגיבוש השפה האמנותית של הספר. לאחר מכן עבר כל איור תהליך ממושך של עיבוד וליטוש בפוטושופ, שכלל התאמות צבע, תיקוני פרטים, שילוב אלמנטים ועבודה פרטנית עד להשגת התאמה מלאה לטקסט ולאווירה המבוקשת. התהליך כולו נועד להבטיח שכל איור ישרת את הסיפור ויחזק את חוויית הקריאה.
         </p>
 
         <p>
@@ -259,17 +252,104 @@
 </section>
 
 
-<footer class="footer">
+<section id="contact" class="contact">
 
-    <p>
-        ק. כצן · כתיבה · איור · עיצוב ספרים
-    </p>
+        <div class="contact-details">
 
-    <p>
-        © 2026
-    </p>
+            <div class="contact-item">
 
-</footer>
+                <span class="contact-title">
+                    דוא"ל
+                </span>
 
+                <a href="mailto:k025804524@gmail.com">
+                    k025804524@gmail.com
+                </a>
+
+            </div>
+
+            <div class="contact-item">
+
+                <span class="contact-title">
+                    וואטסאפ
+                </span>
+
+                <a href="https://wa.me/972534712101">
+                    053-4712101
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<div id="lightbox" class="lightbox">
+
+    <button class="lightbox-close">×</button>
+
+    <img id="lightbox-img" src="" alt="">
+
+</div>
+   <script>
+
+const images =
+    document.querySelectorAll('.lightbox-image');
+
+const lightbox =
+    document.getElementById('lightbox');
+
+const lightboxImg =
+    document.getElementById('lightbox-img');
+
+const closeBtn =
+    document.querySelector('.lightbox-close');
+
+images.forEach(img=>{
+
+    img.addEventListener('click',()=>{
+
+        lightboxImg.src = img.src;
+
+        lightbox.classList.add('active');
+
+        document.body.style.overflow='hidden';
+
+    });
+
+});
+
+function closeLightbox(){
+
+    lightbox.classList.remove('active');
+
+    document.body.style.overflow='';
+
+}
+
+closeBtn.addEventListener('click',closeLightbox);
+
+lightbox.addEventListener('click',(e)=>{
+
+    if(e.target === lightbox){
+
+        closeLightbox();
+
+    }
+
+});
+
+document.addEventListener('keydown',(e)=>{
+
+    if(e.key === 'Escape'){
+
+        closeLightbox();
+
+    }
+
+});
+
+</script>
 </body>
 </html>
