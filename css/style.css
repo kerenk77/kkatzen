@@ -293,14 +293,14 @@ p{
 }
 
 /* עיצוב כרטיס הספר כקישור נלחץ */
-.book-card {
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    display: flex;         /* שינוי ל-flex עוזר לשלוט ביישור הפנימי */
-    flex-direction: column;
-    align-items: center;   /* ממרכז את התמונה והטקסט אחד תחת השני */
-    width: 100%;           /* מבטיח פריסה שווה */
+/* תיאור הספר - הפסקה שמתחת לכותרת */
+.book-card p {
+    font-size: 0.95rem;      /* גודל טקסט קריא ופרופורציונלי */
+    line-height: 1.6;
+    max-width: 280px;        /* מונע מהטקסט להימתח לרוחב גדול מדי */
+    margin: 10px auto 15px;  /* ממרכז את גוש הטקסט ונותן רווח קל */
+    padding: 0 10px;         /* שומר על מרווח ביטחון מהצדדים שלא ייגע בקצה המסך */
+    word-wrap: break-word;   /* שובר מילים ארוכות במקרה הצורך ולא נותן להן לצאת */
 }
 
 /* הקטנת תמונות הספרים כדי שייכנסו בבת אחת */
@@ -785,6 +785,21 @@ backdrop-filter:blur(10px);
 /* =========================
 MOBILE
 ========================= */
+@media (max-width: 900px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr); /* עובר ל-2 טורים כדי לתת יותר מרחב לטקסט */
+        gap: 30px;
+        padding: 0 20px; /* שומר על רווח קבוע מדפנות המסך בנייד */
+    }
+}
+
+@media (max-width: 600px) {
+    .books-grid {
+        grid-template-columns: 1fr; /* במסך של טלפון - ספר אחד בכל שורה, הכל מרווח ואסוף */
+        gap: 40px;
+    }
+}
+
 @media (max-width:900px){
     .services{
         padding:80px 30px;
