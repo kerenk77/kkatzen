@@ -1123,7 +1123,7 @@ MOBILE
 
     margin:0 0 20px;
 
-    font-size:1rem;
+    font-size:.85rem;
 
     line-height:2;
 
@@ -1144,3 +1144,64 @@ MOBILE
 
         font-size:1.1rem;
     }
+.lightbox-image{
+    cursor:pointer;
+}
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.25s;
+
+    z-index:9999;
+}
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+.lightbox img{
+
+    max-width:90vw;
+
+    max-height:90vh;
+
+    border-radius:12px;
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:30px;
+
+    left:30px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+}
