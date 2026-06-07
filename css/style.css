@@ -783,52 +783,44 @@ backdrop-filter:blur(10px);
     right:0;
 }
 /* =========================
-MOBILE
+/* =========================
+   MOBILE & BOOKS GRID - FIXED
 ========================= */
+
+/* התאמות למסכים עד 900 פיקסלים (טאבלטים ומחשבים קטנים) */
 @media (max-width: 900px) {
-    .books-grid {
-        grid-template-columns: repeat(2, 1fr); /* עובר ל-2 טורים כדי לתת יותר מרחב לטקסט */
-        gap: 30px;
-        padding: 0 20px; /* שומר על רווח קבוע מדפנות המסך בנייד */
-    }
-}
-
-@media (max-width: 600px) {
-    .books-grid {
-        grid-template-columns: 1fr; /* במסך של טלפון - ספר אחד בכל שורה, הכל מרווח ואסוף */
-        gap: 40px;
-    }
-}
-
-@media (max-width:900px){
-    .services{
-        padding:80px 30px;
+    .services {
+        padding: 80px 30px;
     }
 
-    .process{
-        padding:80px 30px;
+    .process {
+        padding: 80px 30px;
     }
 
-    .process-steps{
-        grid-template-columns:1fr;
+    .process-steps {
+        grid-template-columns: 1fr;
     }
 
-    .process-steps div:not(:last-child)::after{
-        content:"↓";
-        left:50%;
-        top:auto;
-        bottom:-22px;
-        transform:translateX(-50%);
+    .process-steps div:not(:last-child)::after {
+        content: "↓";
+        left: 50%;
+        top: auto;
+        bottom: -22px;
+        transform: translateX(-50%);
     }
     
-    .books-grid{
-        grid-template-columns:repeat(2,1fr);
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr); /* עובר ל-2 טורים מרווחים */
+        gap: 30px;
+        padding: 0 20px; /* שומר על רווח מדפנות המסך */
     }
-} /* סגירת המדיה קוורי של 900 פיקסלים */
+}
 
-@media (max-width:600px){
-    .books-grid{
-        grid-template-columns:1fr;
+/* התאמות למסכים עד 600 פיקסלים (טלפונים ניידים) */
+@media (max-width: 600px) {
+    .books-grid {
+        grid-template-columns: 1fr; /* ספר אחד בשורה, הכל אסוף ומיושר */
+        gap: 40px;
     }
 }
 /* =========================
