@@ -1,4 +1,3 @@
-
 :root{
     --gold:#A78642;
     --dark:#2D2D2D;
@@ -83,17 +82,11 @@ body{
 
 /* צמצום הרווח הכללי והגדלת אזור התוכן */
 .hero {
-
     position: relative;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 20px;
-
     padding: 40px 40px 60px;
 }
 
@@ -181,14 +174,14 @@ p{
     pointer-events: none;
 }
 
-.hero-{
+.hero-books{
     display:flex;
     justify-content:center;
     gap:15px;
     margin-top:40px;
 }
 
-.hero- img{
+.hero-books img{
     height:120px;
     width:auto;
 
@@ -200,17 +193,17 @@ p{
     transition:.3s;
 }
 
-.hero- img:hover{
+.hero-books img:hover{
     transform:translateY(-5px);
 }
 /* האזור הכללי של הספרים */
-.-header{
+.books-header{
     text-align:center;
     max-width:700px;
     margin:0 auto 60px;
 }
 
-.-tag{
+.books-tag{
     display:block;
     color:var(--gold);
     font-size:.9rem;
@@ -218,7 +211,7 @@ p{
     margin-bottom:10px;
     text-transform:uppercase;
 }
-.-tag2{
+.books-tag2{
     display:block;
     color:var(--gold);
     font-size:3rem;
@@ -230,7 +223,7 @@ p{
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:320px;
+    min-height:auto; /* תוקן ל-auto כדי למנוע מתיחת תמונות קבועה */
 }
 
 .featured{
@@ -249,24 +242,21 @@ p{
     font-weight:600;
 }
 @media (max-width:900px){
-
     .featured{
         transform:none;
     }
-
     .featured:hover{
         transform:translateY(-8px);
     }
-
 }
 
-. {
+.books {
     padding: 40px 40px; /* הוקטן מ-120px כדי להקפיץ את הספרים למעלה */
     background: #fefefe;
 }
 
 /* כותרת קומפקטית יותר */
-. h2 {
+.books h2 {
     text-align: center;
     font-size: 2.2rem; /* הוקטן מ-3rem */
     color: var(--dark);
@@ -285,14 +275,14 @@ p{
    גריד הספרים והכרטיסים - הגרסה המאוחדת והיציבה
 ========================================== */
 
-/* גריד הספרים הראשי (למחשבים ומסכים גדולים) */
+/* גריד הספרים הראשי */
 .books-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 עמודות קבועות ויציבות */
     gap: 40px;
-    max-width: 1100px; /* נותן עוד קצת מרחב נשימה לספרים */
+    max-width: 1100px; 
     margin: 0 auto;
-    padding: 0 30px;   /* מרווח ביטחון מהצדדים שלא ייחתך לעולם */
+    padding: 0 30px;   
     justify-content: center;
     justify-items: center;
 }
@@ -308,18 +298,28 @@ p{
     text-align: center;
 }
 
-/* מניעת קו תחתון בכל מצב (עכבר, פוקוס, או על אלמנטים פנימיים) */
+/* מניעת קו תחתון בכל מצב */
 .book-card:hover, 
 .book-card:focus,
 .book-card * {
     text-decoration: none !important;
 }
 
-/* התמונות בתוך הכרטיס - רספונסיביות מלאה */
+/* תיאור הספר - הפסקה שמתחת לכותרת */
+.book-card p {
+    font-size: 0.95rem;      
+    line-height: 1.6;
+    max-width: 280px;        
+    margin: 10px auto 15px;  
+    padding: 0 10px;         
+    word-wrap: break-word;   
+}
+
+/* התמונות בתוך הכרטיס */
 .book-card img {
-    width: 100%;       /* התמונה תתפוס את כל רוחב העמודה שלה */
-    max-width: 190px;  /* הגודל המקסימלי של הספר במסכים גדולים */
-    height: auto;      /* שומר על פרופורציות הגובה כדי למנוע חיתוך מלמעלה */
+    width: 100%;       
+    max-width: 190px;  
+    height: auto;      
     display: block;
     margin: 0 auto;
     transition: transform .35s ease, filter .35s ease;
@@ -341,32 +341,28 @@ p{
     transition: color 0.3s ease;
 }
 
-/* שינוי צבע הכותרת במעבר עכבר על הכרטיס */
+/* שינוי צבע הכותרת במעבר עכבר */
 .book-card:hover h3 {
     color: var(--gold);
 }
 
-
-/* --- התאמות רספונסיביות למסכים קטנים (שאילתות מדיה) --- */
-
-/* טאבלטים ומחשבים ניידים קטנים */
+/* --- התאמות רספונסיביות למסכים קטנים --- */
 @media (max-width: 900px) {
     .books-grid {
-        grid-template-columns: repeat(2, 1fr); /* יורד ל-2 עמודות בצורה מסודרת */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 30px;
     }
 }
 
-/* טלפונים ניידים */
 @media (max-width: 600px) {
     .books-grid {
-        grid-template-columns: 1fr; /* ספר אחד בשורה, ממורכז ואסוף */
+        grid-template-columns: 1fr; 
         gap: 45px;
     }
 }
 
 /* =========================
-   PROCESS
+    PROCESS
 ========================= */
 
 .process{
@@ -381,291 +377,197 @@ p{
 
 .process-tag{
     display:block;
-
     color:var(--gold);
-
     font-size:.85rem;
-
     letter-spacing:3px;
-
     margin-bottom:10px;
 }
 
 .process-header h2{
     font-size:2.3rem;
-
     margin:0 0 15px;
-
     color:var(--dark);
 }
 
 .process-header p{
     font-size:1rem;
-
     color:#777;
-
     margin:0;
 }
 
 .process-grid{
-
     max-width:1300px;
-
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
 }
 
 .process-card{
-
     background:white;
-
     border-radius:20px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.05);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .process-card:hover{
-
     transform:translateY(-6px);
-
-    box-shadow:
-        0 20px 40px rgba(0,0,0,.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
 }
 
 .process-card img{
-
     width:100%;
-
     height:180px;
-
     object-fit:cover;
-
     display:block;
 }
 
 .process-card h3{
-
     margin:20px 20px 10px;
-
     font-size:1.2rem;
-
     color:var(--dark);
 }
 
 .process-card p{
-
     margin:0 20px 25px;
-
     font-size:.95rem;
-
     line-height:1.8;
-
     color:#777;
 }
 
-/* MOBILE */
-
+/* MOBILE PROCESS */
 @media (max-width:900px){
-
     .process{
         padding:60px 25px 80px;
     }
-
     .process-header h2{
         font-size:1.9rem;
     }
-
     .process-grid{
         grid-template-columns:1fr;
     }
+    .services {
+        padding: 80px 30px;
+    }
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    .process-steps div:not(:last-child)::after {
+        content: "↓";
+        left: 50%;
+        top: auto;
+        bottom: -22px;
+        transform: translateX(-50%);
+    }
 }
+
 /* =========================
-   ILLUSTRATIONS
+    ILLUSTRATIONS
 ========================= */
 
 .illustrations{
-
     position:relative;
-
     padding:90px 40px;
-
     background:#fefefe;
 }
 
 .illustrations::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(167,134,66,.04),
-            transparent 70%
-        );
-
+    background: radial-gradient(circle at center, rgba(167,134,66,.04), transparent 70%);
     pointer-events:none;
 }
 
 .illustrations-header{
-
     text-align:center;
-
     max-width:700px;
-
     margin:0 auto 50px;
 }
 
 .illustrations-tag{
-
     display:block;
-
     color:var(--gold);
-
     font-size:.8rem;
-
     letter-spacing:3px;
-
     margin-bottom:10px;
-
     text-transform:uppercase;
 }
 
 .illustrations-header h2{
-
     margin:0 0 15px;
-
     font-size:2.2rem;
-
     font-weight:700;
-
     color:var(--dark);
 }
 
 .illustrations-header p{
-
     margin:0;
-
     font-size:1rem;
-
     color:#777;
-
     line-height:1.8;
 }
 
 /* =========================
-   MASONRY GALLERY
+    MASONRY GALLERY
 ========================= */
 
 .illustrations-grid{
-
     max-width:1400px;
-
     margin:auto;
-
     column-count:4;
-
     column-gap:20px;
 }
 
 .illustrations-grid img{
-
     width:100%;
-
     display:block;
-
     margin-bottom:20px;
-
     border-radius:6px;
-
     cursor:pointer;
-
     background:white;
-
-   box-shadow:
-    0 2px 8px rgba(0,0,0,.04);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .illustrations-grid img:hover{
-
     transform:translateY(-5px);
-
-    box-shadow:
-        0 18px 40px rgba(0,0,0,.14);
+    box-shadow: 0 18px 40px rgba(0,0,0,.14);
 }
 
 /* =========================
-   LIGHTBOX
+    LIGHTBOX
 ========================= */
 
 .lightbox{
-
     position:fixed;
-
     inset:0;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-   background:rgba(254,254,254,.96);
-
-backdrop-filter:blur(10px);
-
+    background:rgba(254,254,254,.96);
+    backdrop-filter:blur(10px);
     opacity:0;
-
     visibility:hidden;
-
     transition:.25s ease;
-
     z-index:9999;
 }
 
 .lightbox.active{
-
     opacity:1;
-
     visibility:visible;
 }
 .lightbox-close{
-
     position:absolute;
-
     top:25px;
     right:30px;
-
     border:none;
     background:none;
-
     font-size:42px;
     font-weight:300;
-
     color:rgba(120,120,120,.8);
-
     cursor:pointer;
-
     transition:.2s;
 }
 
@@ -674,26 +576,16 @@ backdrop-filter:blur(10px);
 }
 .lightbox-prev,
 .lightbox-next{
-
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
-
     border:none;
     background:none;
-
     font-size:70px;
-
     font-weight:200;
-
     color:rgba(140,140,140,.55);
-
     cursor:pointer;
-
     transition:.25s;
-
     z-index:10000;
 }
 
@@ -707,79 +599,54 @@ backdrop-filter:blur(10px);
 
 .lightbox-prev:hover,
 .lightbox-next:hover{
-
     color:rgba(140,140,140,.95);
 }
 
 /* =========================
-   TABLET
+    TABLET & MOBILE GALLERY
 ========================= */
 
 @media (max-width:1100px){
-
     .illustrations-grid{
         column-count:3;
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width:768px){
-
     .illustrations{
-
         padding:70px 25px;
     }
-
     .illustrations-grid{
         column-count:2;
     }
-
     .illustrations-header h2{
         font-size:1.8rem;
     }
 }
 
 @media (max-width:500px){
-
     .illustrations-grid{
         column-count:1;
     }
 }
 .lightbox-counter{
-
     position:absolute;
-
     bottom:35px;
-
     left:50%;
-
     transform:translateX(-50%);
-
     color:rgba(167,134,66,.9);
-
     font-size:.95rem;
-
     font-weight:400;
-
     letter-spacing:3px;
-
     z-index:10000;
 }
 .lightbox img{
-
     max-width:90vw;
     max-height:90vh;
-
     border-radius:12px;
-
     user-select:none;
     -webkit-user-drag:none;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
 }
 .lightbox-prev,
 .lightbox-next{
@@ -792,466 +659,245 @@ backdrop-filter:blur(10px);
 }
 .lightbox-prev-zone,
 .lightbox-next-zone{
-
     position:absolute;
-
     top:0;
     bottom:0;
-
     width:30%;
-
     cursor:pointer;
-
     z-index:10000;
 }
 
 .lightbox-prev-zone{
-
     left:0;
 }
 
 .lightbox-next-zone{
-
     right:0;
 }
-/* =========================
-/* =========================
-   MOBILE & BOOKS GRID - FIXED
-========================= */
-
-/* התאמות למסכים עד 900 פיקסלים (טאבלטים ומחשבים קטנים) */
-@media (max-width: 900px) {
-    .services {
-        padding: 80px 30px;
-    }
-
-    .process {
-        padding: 80px 30px;
-    }
-
-    .process-steps {
-        grid-template-columns: 1fr;
-    }
-
-    .process-steps div:not(:last-child)::after {
-        content: "↓";
-        left: 50%;
-        top: auto;
-        bottom: -22px;
-        transform: translateX(-50%);
-    }
-    
 
 /* =========================
-   ABOUT
+    ABOUT
 ========================= */
 
 .about{
-
     padding:110px 40px;
-
     background:#fefefe;
 }
 
 .about-content{
-
     max-width:680px;
-
     margin:0 auto;
-
     text-align:center;
 }
 
 .about h2{
-
     margin:0 0 30px;
-
     font-size:2rem;
-
     font-weight:700;
-
     color:var(--dark);
 }
 
 .about p{
-
     margin:0 0 18px;
-
     font-size:1rem;
-
     line-height:1.9;
-
     color:#666;
 }
 /* =========================
-   CONTACT
+    CONTACT
 ========================= */
 
 .contact{
-
     padding:120px 40px 80px;
-
     background:#fefefe;
 }
 
 .contact-content{
-
     max-width:800px;
-
     margin:auto;
-
     text-align:center;
 }
 
 .contact h2{
-
     margin:0 0 20px;
-
     font-size:2rem;
-
     color:var(--dark);
 }
 
 .contact p{
-
     margin:0 auto 50px;
-
     max-width:500px;
-
     font-size:1rem;
-
     line-height:2;
-
     color:#666;
 }
 
 .contact-details{
-
     display:flex;
-
     justify-content:center;
-
     gap:80px;
-
     flex-wrap:wrap;
 }
 
 .contact-item{
-
     display:flex;
-
     flex-direction:column;
-
     gap:10px;
 }
 
 .contact-title{
-
     font-size:.75rem;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
     color:var(--gold);
 }
 
 .contact-item a{
-
     text-decoration:none;
-
     color:var(--dark);
-
     font-size:1rem;
-
     transition:.3s;
 }
 
 .contact-item a:hover{
-
     color:var(--gold);
 }
 
-}
-/*daf sefer*/
+/* DAF SEFER */
 .book-page-hero{
-
     position:relative;
-
     padding:100px 40px 80px;
-
     text-align:center;
-
     overflow:hidden;
 }
 .book-page-hero::before{
-
     content:"";
-
     position:absolute;
-
     width:700px;
     height:700px;
-
     left:50%;
     top:50%;
-
     transform:translate(-50%,-50%);
-
     border-radius:50%;
-
     background:radial-gradient(
         circle,
         rgba(212,175,55,.10) 0%,
         rgba(212,175,55,.04) 40%,
         transparent 75%
     );
-
     pointer-events:none;
 }
 .book-page-cover{
-
     display:block;
-
     width:250px;
-
     max-width:90%;
-
     margin:0 auto;
-
     transform:none;
-
-    filter:
-        drop-shadow(
-            0 30px 50px rgba(0,0,0,.15)
-        );
+    filter: drop-shadow(0 30px 50px rgba(0,0,0,.15));
 }
 .book-page-content{
-
     max-width:900px;
-
     margin:0 auto;
-
     position:relative;
-
     z-index:2;
 }
-.book-image{
-
-    display:block;
-
-    width:450px;
-
-    max-width:90%;
-
-    margin:0 auto;
-
-    transform:none;
-
-    filter:
-        drop-shadow(
-            0 30px 50px rgba(0,0,0,.15)
-        );
-}
 .book-page-content h1{
-
     margin:0;
-
     font-size:2.8rem;
-
     line-height:1.1;
 }
 
 .project-list{
-
     list-style:none;
-
     padding:0;
-
     margin:0 auto 50px;
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,max-content);
-
+    grid-template-columns: repeat(2,max-content);
     justify-content:center;
-
     gap:14px 40px;
 }
 
 .project-list li{
-
     font-size:1rem;
-
     color:#666;
 }
 .book-meta{
-
     margin:5px 0 0;
-
     font-size:.95rem;
-
     color:#888;
-
     letter-spacing:1px;
-    
 }
 .book-side{
-
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     gap:15px;
 }
 .showcase .section-text p{
-
     font-size:0.92rem;
-
     line-height:1.8;
 }
 .showcase{
-
     max-width:1100px;
-
     margin:60px auto;
-
     padding:0 40px;
-
     display:grid;
-
-    grid-template-columns:
-        1fr
-        480px;
-
-    /*gap:70px;*/
-
+    grid-template-columns: 1fr 480px;
     align-items:center;
 }
 .case-study{
-
     padding:60px 40px;
-
     background:#fefefe;
 }
 .case-study .section-text{
-
     max-width:760px;
-
     margin:0 auto;
-
     text-align:center;
 }
 
 .case-study .section-tag{
-
     display:block;
-
     margin-bottom:9px;
-
     color:var(--gold);
-
     font-size:.8rem;
-
     letter-spacing:3px;
-
     text-transform:uppercase;
 }
 .case-study h2{
-
     margin:0 0 30px;
-
     font-size:2rem;
-
     font-weight:300;
-
     color:var(--dark);
 }
 .case-study p{
-
     font-size:1.1rem;
-
     line-height:2.3;
-
     color:#666;
 }
 .case-study p:last-child{
-
     margin-bottom:0;
 }
+
 @media (max-width:368px){
-
     .case-study{
-
         padding:90px 25px;
     }
-
     .case-study h2{
-
         font-size:1.1rem;
     }
+}
+
 .lightbox-image{
     cursor:pointer;
 }
 
-.lightbox{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.92);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.25s;
-
-    z-index:9999;
-}
-
-.lightbox.active{
-
-    opacity:1;
-
-    visibility:visible;
-}
-
-.lightbox img{
-
-    max-width:90vw;
-
-    max-height:90vh;
-
-    border-radius:12px;
-}
-
 .lightbox-close{
-
     position:absolute;
-
     top:30px;
-
     left:30px;
-
     background:none;
-
     border:none;
-
     color:white;
-
     font-size:2rem;
-
     cursor:pointer;
 }
-
