@@ -73,6 +73,7 @@ body{
     background:#fefefe;
     font-family:'Heebo',sans-serif;
     color:#2d2d2d;
+    overflow-x: hidden; /* חוסם יצירת גלילה אופקית מכל אלמנט שחורג */
 }
 .logo{
     width:140px;
@@ -779,38 +780,33 @@ backdrop-filter:blur(10px);
 /* =========================
 MOBILE
 ========================= */
-
-.services{
-    padding:80px 30px;
-}
-
-.process{
-    padding:80px 30px;
-}
-
-.process-steps{
-    grid-template-columns:1fr;
-}
-
-.process-steps div:not(:last-child)::after{
-    content:"↓";
-
-    left:50%;
-    top:auto;
-    bottom:-22px;
-
-    transform:translateX(-50%);
-}
-    }
 @media (max-width:900px){
+    .services{
+        padding:80px 30px;
+    }
 
+    .process{
+        padding:80px 30px;
+    }
+
+    .process-steps{
+        grid-template-columns:1fr;
+    }
+
+    .process-steps div:not(:last-child)::after{
+        content:"↓";
+        left:50%;
+        top:auto;
+        bottom:-22px;
+        transform:translateX(-50%);
+    }
+    
     .books-grid{
         grid-template-columns:repeat(2,1fr);
     }
-}
+} /* סגירת המדיה קוורי של 900 פיקסלים */
 
 @media (max-width:600px){
-
     .books-grid{
         grid-template-columns:1fr;
     }
@@ -1227,6 +1223,4 @@ MOBILE
 
     cursor:pointer;
 }
-*{
-    outline:1px solid red;
-}
+
