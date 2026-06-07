@@ -1230,3 +1230,6 @@ MOBILE
 
     cursor:pointer;
 }
+*{
+    outline:1px solid red;
+}
