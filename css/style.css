@@ -1063,6 +1063,12 @@ MOBILE
 
     gap:15px;
 }
+.showcase .section-text p{
+
+    font-size:0.92rem;
+
+    line-height:1.8;
+}
 .showcase{
 
     max-width:1100px;
@@ -1089,12 +1095,13 @@ MOBILE
 }
 .case-study .section-text{
 
-    max-width:480px;
+    max-width:760px;
 
     margin:0 auto;
 
     text-align:center;
 }
+
 .case-study .section-tag{
 
     display:block;
@@ -1121,11 +1128,9 @@ MOBILE
 }
 .case-study p{
 
-    margin:0 0 20px;
+    font-size:1.1rem;
 
-    font-size:.85rem;
-
-    line-height:2;
+    line-height:2.3;
 
     color:#666;
 }
