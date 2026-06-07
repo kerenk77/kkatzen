@@ -288,14 +288,19 @@ p{
    gap: 40px;
     max-width: 1000px; /* שומר על הספרים מרוכזים ויפים */
     margin: 0 auto;
+    justify-content: center; /* ממרכז את העמודות בתוך המרחב */
+    justify-items: center;   /* ממרכז את התוכן של כל כרטיס בתוך העמודה שלו */
 }
 
 /* עיצוב כרטיס הספר כקישור נלחץ */
 .book-card {
     text-align: center;
-    text-decoration: none; /* מבטל קו תחתון של קישורים */
-    color: inherit; /* שומר על צבע הטקסט המקורי */
-    display: block;
+    text-decoration: none;
+    color: inherit;
+    display: flex;         /* שינוי ל-flex עוזר לשלוט ביישור הפנימי */
+    flex-direction: column;
+    align-items: center;   /* ממרכז את התמונה והטקסט אחד תחת השני */
+    width: 100%;           /* מבטיח פריסה שווה */
 }
 
 /* הקטנת תמונות הספרים כדי שייכנסו בבת אחת */
