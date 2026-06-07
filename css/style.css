@@ -181,14 +181,14 @@ p{
     pointer-events: none;
 }
 
-.hero-books{
+.hero-{
     display:flex;
     justify-content:center;
     gap:15px;
     margin-top:40px;
 }
 
-.hero-books img{
+.hero- img{
     height:120px;
     width:auto;
 
@@ -200,17 +200,17 @@ p{
     transition:.3s;
 }
 
-.hero-books img:hover{
+.hero- img:hover{
     transform:translateY(-5px);
 }
 /* האזור הכללי של הספרים */
-.books-header{
+.-header{
     text-align:center;
     max-width:700px;
     margin:0 auto 60px;
 }
 
-.books-tag{
+.-tag{
     display:block;
     color:var(--gold);
     font-size:.9rem;
@@ -218,7 +218,7 @@ p{
     margin-bottom:10px;
     text-transform:uppercase;
 }
-.books-tag2{
+.-tag2{
     display:block;
     color:var(--gold);
     font-size:3rem;
@@ -260,13 +260,13 @@ p{
 
 }
 
-.books {
+. {
     padding: 40px 40px; /* הוקטן מ-120px כדי להקפיץ את הספרים למעלה */
     background: #fefefe;
 }
 
 /* כותרת קומפקטית יותר */
-.books h2 {
+. h2 {
     text-align: center;
     font-size: 2.2rem; /* הוקטן מ-3rem */
     color: var(--dark);
@@ -281,15 +281,20 @@ p{
     font-size: 1.1rem;
 }
 
-/* גריד הספרים */
+/* ==========================================
+   גריד הספרים והכרטיסים - הגרסה המאוחדת והיציבה
+========================================== */
+
+/* גריד הספרים הראשי (למחשבים ומסכים גדולים) */
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-   gap: 40px;
-    max-width: 1000px; /* שומר על הספרים מרוכזים ויפים */
+    grid-template-columns: repeat(3, 1fr); /* 3 עמודות קבועות ויציבות */
+    gap: 40px;
+    max-width: 1100px; /* נותן עוד קצת מרחב נשימה לספרים */
     margin: 0 auto;
-    justify-content: center; /* ממרכז את העמודות בתוך המרחב */
-    justify-items: center;   /* ממרכז את התוכן של כל כרטיס בתוך העמודה שלו */
+    padding: 0 30px;   /* מרווח ביטחון מהצדדים שלא ייחתך לעולם */
+    justify-content: center;
+    justify-items: center;
 }
 
 /* עיצוב כרטיס הספר כקישור נלחץ */
@@ -298,30 +303,30 @@ p{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
-    /* מונע מהדפדפן לשים קו תחתון על הקישור ועל כל הטקסטים שבתוכו */
-    text-decoration: none !important; 
-    
-    color: inherit; /* שומר על צבע הטקסט המקורי של האלמנטים */
+    text-decoration: none !important; /* ביטול גורף של קו תחתון */
+    color: inherit; 
     text-align: center;
 }
-/* ליתר ביטחון - מוודא שגם במעבר עכבר לא יקפוץ קו תחתון */
+
+/* מניעת קו תחתון בכל מצב (עכבר, פוקוס, או על אלמנטים פנימיים) */
 .book-card:hover, 
 .book-card:focus,
 .book-card * {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-/* התמונות עצמן */
+/* התמונות בתוך הכרטיס - רספונסיביות מלאה */
 .book-card img {
-    width: 100%;
-    max-width: 180px; /* הגדלתי מעט מ-160px כדי שייראו טוב יותר */
-    height: auto;
-    object-fit: contain;
+    width: 100%;       /* התמונה תתפוס את כל רוחב העמודה שלה */
+    max-width: 190px;  /* הגודל המקסימלי של הספר במסכים גדולים */
+    height: auto;      /* שומר על פרופורציות הגובה כדי למנוע חיתוך מלמעלה */
+    display: block;
+    margin: 0 auto;
     transition: transform .35s ease, filter .35s ease;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,.10));
 }
-/* אפקט מעבר עכבר יוקרתי */
+
+/* אפקט מעבר עכבר על התמונה */
 .book-card img:hover {
     transform: translateY(-8px) scale(1.04);
     filter: drop-shadow(0 15px 25px rgba(0,0,0,.15));
@@ -329,18 +334,36 @@ p{
 
 /* כותרת הספר מתחת לתמונה */
 .book-card h3 {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    font-weight: 500;
+    margin-top: 20px;
+    font-size: 1.15rem;
+    font-weight: 600;
     color: var(--dark);
     transition: color 0.3s ease;
 }
 
-/* שינוי צבע הטקסט כשהעכבר מעל כל אזור הכרטיס */
+/* שינוי צבע הכותרת במעבר עכבר על הכרטיס */
 .book-card:hover h3 {
     color: var(--gold);
 }
 
+
+/* --- התאמות רספונסיביות למסכים קטנים (שאילתות מדיה) --- */
+
+/* טאבלטים ומחשבים ניידים קטנים */
+@media (max-width: 900px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr); /* יורד ל-2 עמודות בצורה מסודרת */
+        gap: 30px;
+    }
+}
+
+/* טלפונים ניידים */
+@media (max-width: 600px) {
+    .books-grid {
+        grid-template-columns: 1fr; /* ספר אחד בשורה, ממורכז ואסוף */
+        gap: 45px;
+    }
+}
 
 /* =========================
    PROCESS
@@ -818,27 +841,7 @@ backdrop-filter:blur(10px);
         transform: translateX(-50%);
     }
     
-   /* גריד הספרים המשופר */
-.books-grid {
-    display: grid;
-    /* במקום 3 עמודות קשיחות, הדפדפן יחשב לבד כמה ספרים נכנסים בשורה לפי רוחב מינימלי של 180px */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px;
-    max-width: 1000px; /* שומר על גוש הספרים מרוכז יפה במרכז האתר */
-    margin: 0 auto;
-    padding: 0 20px;   /* מרווח ביטחון מהצדדים כדי שספרים לא ייגעו בקצה המסך */
-    justify-content: center;
-    justify-items: center;
-}
-}
 
-/* התאמות למסכים עד 600 פיקסלים (טלפונים ניידים) */
-@media (max-width: 600px) {
-    .books-grid {
-        grid-template-columns: 1fr; /* ספר אחד בשורה, הכל אסוף ומיושר */
-        gap: 40px;
-    }
-}
 /* =========================
    ABOUT
 ========================= */
