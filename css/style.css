@@ -1008,7 +1008,23 @@ MOBILE
 
     z-index:2;
 }
+.book-image{
 
+    display:block;
+
+    width:450px;
+
+    max-width:90%;
+
+    margin:0 auto;
+
+    transform:none;
+
+    filter:
+        drop-shadow(
+            0 30px 50px rgba(0,0,0,.15)
+        );
+}
 .book-page-content h1{
 
     margin:0;
