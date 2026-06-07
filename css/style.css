@@ -293,25 +293,34 @@ p{
 }
 
 /* עיצוב כרטיס הספר כקישור נלחץ */
-/* תיאור הספר - הפסקה שמתחת לכותרת */
-.book-card p {
-    font-size: 0.95rem;      /* גודל טקסט קריא ופרופורציונלי */
-    line-height: 1.6;
-    max-width: 280px;        /* מונע מהטקסט להימתח לרוחב גדול מדי */
-    margin: 10px auto 15px;  /* ממרכז את גוש הטקסט ונותן רווח קל */
-    padding: 0 10px;         /* שומר על מרווח ביטחון מהצדדים שלא ייגע בקצה המסך */
-    word-wrap: break-word;   /* שובר מילים ארוכות במקרה הצורך ולא נותן להן לצאת */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    /* מונע מהדפדפן לשים קו תחתון על הקישור ועל כל הטקסטים שבתוכו */
+    text-decoration: none !important; 
+    
+    color: inherit; /* שומר על צבע הטקסט המקורי של האלמנטים */
+    text-align: center;
+}
+/* ליתר ביטחון - מוודא שגם במעבר עכבר לא יקפוץ קו תחתון */
+.book-card:hover, 
+.book-card:focus,
+.book-card * {
+    text-decoration: none;
 }
 
-/* הקטנת תמונות הספרים כדי שייכנסו בבת אחת */
+/* התמונות עצמן */
 .book-card img {
     width: 100%;
-    max-width: 160px; /* הוקטן מ-200px כדי למנוע חיתוך במסכים קטנים */
+    max-width: 180px; /* הגדלתי מעט מ-160px כדי שייראו טוב יותר */
     height: auto;
+    object-fit: contain;
     transition: transform .35s ease, filter .35s ease;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,.10));
 }
-
 /* אפקט מעבר עכבר יוקרתי */
 .book-card img:hover {
     transform: translateY(-8px) scale(1.04);
@@ -809,11 +818,18 @@ backdrop-filter:blur(10px);
         transform: translateX(-50%);
     }
     
-    .books-grid {
-        grid-template-columns: repeat(2, 1fr); /* עובר ל-2 טורים מרווחים */
-        gap: 30px;
-        padding: 0 20px; /* שומר על רווח מדפנות המסך */
-    }
+   /* גריד הספרים המשופר */
+.books-grid {
+    display: grid;
+    /* במקום 3 עמודות קשיחות, הדפדפן יחשב לבד כמה ספרים נכנסים בשורה לפי רוחב מינימלי של 180px */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    max-width: 1000px; /* שומר על גוש הספרים מרוכז יפה במרכז האתר */
+    margin: 0 auto;
+    padding: 0 20px;   /* מרווח ביטחון מהצדדים כדי שספרים לא ייגעו בקצה המסך */
+    justify-content: center;
+    justify-items: center;
+}
 }
 
 /* התאמות למסכים עד 600 פיקסלים (טלפונים ניידים) */
