@@ -1,3 +1,8 @@
+הנה הקוד המעודכן. הוספתי את הווידאו יחד עם כיתוב קטן מתחתיו ("כך הייתה נראית הסדרה המקורית"), ועיצבתי את הטקסט כך שיופיע בצורה נקייה וקטנה באמצעות מחלקה ייעודית (`video-caption`).
+
+העתיקי את הקוד המלא והדביקי אותו בקובץ שלך:
+
+```html
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -9,7 +14,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-   <link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<style>
+/* עיצוב מקומי קטן עבור כיתוב מתחת לווידאו */
+.video-caption {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 400;
+}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -65,7 +81,7 @@
              src="images/sidra2.png"
              alt="בעשט">
 
-      <!--<p class="book-meta">
+     <!--<p class="book-meta">
             310 עמודים · כריכה קשה · 2026
         </p>-->
 
@@ -118,13 +134,14 @@
 
     </div>
 
-  <video class="project-video" autoplay muted loop playsinline>
-    <source src="images/besht.mp4" type="video/mp4">
-    הדפדפן שלך לא תומך בהצגת סרטונים.
-</video>
- <p>
-      כך הייתה נראית הסדרה המקורית
-        </p>
+    <div class="showcase-media">
+        <video class="project-video" autoplay muted loop playsinline>
+            <source src="images/besht.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בהצגת סרטונים.
+        </video>
+        <p class="video-caption">כך הייתה נראית הסדרה המקורית</p>
+    </div>
+
 </section>
 
   
@@ -187,7 +204,7 @@
     </div>
 
    <div class="illustrations-grid">
-    <img class="lightbox-image" src="images/illustration16.png" alt="איור מספר 10">  
+    <img class="lightbox-image" src="images/illustration16.png" alt="איור מספר 10">   
     <img class="lightbox-image" src="images/illustration17.png" alt="איור מספר 12">
     <img class="lightbox-image" src="images/illustration18.png" alt="איור מספר 13">
     <img class="lightbox-image" src="images/illustration19.png" alt="איור מספר 14">
@@ -419,3 +436,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
+```
