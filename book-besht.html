@@ -1,8 +1,3 @@
-הנה הקוד המעודכן. הוספתי את הווידאו יחד עם כיתוב קטן מתחתיו ("כך הייתה נראית הסדרה המקורית"), ועיצבתי את הטקסט כך שיופיע בצורה נקייה וקטנה באמצעות מחלקה ייעודית (`video-caption`).
-
-העתיקי את הקוד המלא והדביקי אותו בקובץ שלך:
-
-```html
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -17,7 +12,16 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 
 <style>
-/* עיצוב מקומי קטן עבור כיתוב מתחת לווידאו */
+/* עיצוב מקומי עבור הסרטון והכיתוב תחתיו */
+.project-video {
+    width: 100%;
+    max-width: 320px; /* כאן אפשר לשלוט בגודל הפריים - אפשר להקטין ל-250px או להגדיל ל-400px */
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
 .video-caption {
     font-size: 0.85rem;
     color: #666;
