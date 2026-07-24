@@ -901,3 +901,11 @@ p{
     font-size:2rem;
     cursor:pointer;
 }
+.project-video {
+    width: 100%;
+    max-width: 600px; /* או כל רוחב שמתאים לדף שלך */
+    height: auto;
+    border-radius: 8px; /* אם את רוצה פינות מעוגלות כמו לתמונות */
+    display: block;
+    margin: 20px auto;
+}
