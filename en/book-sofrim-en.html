@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors Share Faith – K. Katzen</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="index.html" class="brand">
+        <img src="../images/logo.png" alt="Logo">
+        <span>K. Katzen</span>
+    </a>
+
+    <nav>
+        <a href="index.html#process">From Idea to Print</a>
+        <span>·</span>
+        <a href="index.html#illustrations">Illustration Gallery</a>
+        <span>·</span>
+        <a href="index.html#books">Books</a>
+        <span>·</span>
+        <a href="index.html#about">About</a>
+        <span>·</span>
+        <a href="index.html#contact">Contact</a>
+        <span>·</span>
+        <a href="../index.html">HE</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="text">
+        <h1>Authors Share Faith</h1>
+
+        <p class="tagline">Illustration & Cover Design</p>
+
+        <ul class="project-list">
+            <li>Visual Style Development</li>
+            <li>Interior Illustrations</li>
+            <li>Cover Design & Artwork</li>
+            <li>Print Color & File Preparation</li>
+        </ul>
+    </div>
+
+    <div class="book-side">
+        <img class="book-cover"
+             src="../images/admaia-sofrim.png"
+             alt="Authors Share Faith">
+    </div>
+</section>
+
+<section class="case-study">
+    <div class="section-text">
+
+        <span class="section-tag">Project Details</span>
+
+        <h2>Book Information</h2>
+
+        <div class="project-data">
+
+            <p><strong>Title:</strong> Authors Share Faith</p>
+
+            <p><strong>Assignment:</strong> Interior illustrations and cover design for a completed manuscript.</p>
+
+            <p><strong>Challenge:</strong> Creating original contemporary imagery while maintaining a distinctive artistic style that reflects real-life stories of faith and personal growth.</p>
+
+            <p><strong>Tools:</strong> Adobe Photoshop · AI-Assisted Illustration</p>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="showcase">
+
+    <div class="section-text">
+
+        <p class="tagline">Cover Design</p>
+
+        <h2>Creating the Cover</h2>
+
+        <p>
+            The cover was designed to capture the sense of hope, inspiration, and spiritual connection found throughout the book. A dramatic composition, carefully crafted lighting, and a unique visual perspective work together to create a memorable first impression while reflecting the emotional tone of the stories inside.
+        </p>
+
+    </div>
+
+    <img class="book-page-cover lightbox-image"
+         src="../images/sofrim.png"
+         alt="Book Cover">
+
+</section>
+
+<section class="showcase">
+
+    <div class="section-text">
+
+        <p class="tagline">Art Direction</p>
+
+        <h2>Contemporary Illustrations</h2>
+
+        <p>
+            Unlike historical or fantasy projects, this book required a modern and realistic visual approach. The illustrations were created to accompany contemporary stories of personal challenges, choices, and faith, making them immediately relatable to today's readers.
+        </p>
+
+        <p>
+            Particular attention was given to facial expressions, emotion, and everyday details, allowing both younger and adult readers to connect naturally with the characters and situations portrayed throughout the book.
+        </p>
+
+    </div>
+
+    <img class="book-page-cover lightbox-image"
+         src="../images/illustration1.jpg"
+         alt="Selected Contemporary Illustrations">
+
+</section>
+
+<section class="case-study">
+
+    <div class="section-text">
+
+        <span class="section-tag">Creative Process</span>
+
+        <h2>Developing the Visual Language</h2>
+
+        <p>
+            The illustrations were developed using AI-assisted creative tools to explore composition and lighting before being extensively refined in Adobe Photoshop. Each image underwent careful digital painting, color correction, and detailed retouching to ensure a consistent artistic language across the entire collection, creating a seamless and engaging reading experience.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <div class="contact-content">
+
+        <div class="contact-details">
+
+            <div class="contact-item">
+
+                <span class="contact-title">Email</span>
+
+                <a href="mailto:k025804524@gmail.com">
+                    k025804524@gmail.com
+                </a>
+
+            </div>
+
+            <div class="contact-item">
+
+                <span class="contact-title">WhatsApp</span>
+
+                <a href="https://wa.me/972534712101">
+                    +972 53 471 2101
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close">×</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+const images = document.querySelectorAll('.lightbox-image');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox-close');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+</script>
+
+</body>
+</html>
